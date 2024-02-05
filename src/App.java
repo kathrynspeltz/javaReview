@@ -4,19 +4,14 @@ import java.util.Scanner;
 public class App {
 //    static int age2 = 6;
     public static void main(String[] args) {
-        User user = new User();
-        user.name = "Kathryn";
-        user.birthDay = LocalDate.parse("2012-12-12");
-        System.out.printf("%s was born back in %s and she is now %d years old \n", user.name, user.birthDay.toString(), user.age());
+        User user = new User("Kathryn", "2012-12-12" );
+        System.out.printf("%s was born back in %s and she is now %d years old \n", user.getName(), user.getBirthday(), user.age());
 
-        Book book = new Book();
-
-        book.title = "Romeo and Juliet";
-        book.author = "Shakespeare";
+        Book book = new Book("Romeo and Juliet", "Shakespeare" );
 
         user.borrow(book);
 
-        System.out.printf("%s has borrowed these books: %s \n", user.name, user.books.toString());
+        System.out.printf("%s has borrowed these books: %s \n", user.getName(), user.borrowedBooks());
 
 //        User youngerUser = new User();
 //        youngerUser.name = "Kathryn Jr";
