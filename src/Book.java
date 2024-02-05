@@ -2,9 +2,12 @@ public class Book {
     private String title;
     private String author;
 
-    Book(String title, String author ) {
+    private Integer bookPages;
+
+    Book(String title, String author, Integer bookPages ) {
         this.title = title;
         this.author = author;
+        this.bookPages = bookPages;
     }
 
     public String getTitle() {

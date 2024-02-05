@@ -5,11 +5,17 @@ public class App {
 //    static int age2 = 6;
     public static void main(String[] args) {
         User user = new User("Kathryn", "2012-12-12" );
+
+        Book romeo = new Book("Romeo and Juliet", "Shakespeare", 330 );
+        AudioBook coding = new AudioBook("All About Coding", "Students Everywhere", 20000);
+        Ebook example1 = new Ebook("I am another example", "Example Author", 345, "Kindle");
+        System.out.println(romeo.toString());
+        System.out.println(coding.toString());
+        System.out.println(example1.toString());
+
+
+        user.borrow(romeo);
         System.out.printf("%s was born back in %s and she is now %d years old \n", user.getName(), user.getBirthday(), user.age());
-
-        Book book = new Book("Romeo and Juliet", "Shakespeare" );
-
-        user.borrow(book);
 
         System.out.printf("%s has borrowed these books: %s \n", user.getName(), user.borrowedBooks());
 
